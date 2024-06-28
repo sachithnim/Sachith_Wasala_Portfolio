@@ -1,3 +1,4 @@
+import { Button } from './ui/Button'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 
@@ -28,6 +29,12 @@ export const Hero = () => {
           <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
             Hi, I&apos;m Sachith Wasala, 
           </p>
+
+          <a href='#about'>
+            <Button 
+              title="Show my work"
+            />
+          </a>
 
         </div>
       </div>
