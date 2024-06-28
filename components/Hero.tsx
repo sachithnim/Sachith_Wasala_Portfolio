@@ -1,3 +1,4 @@
+import { FaLocationArrow } from 'react-icons/fa'
 import { Button } from './ui/Button'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
@@ -33,6 +34,8 @@ export const Hero = () => {
           <a href='#about'>
             <Button 
               title="Show my work"
+              icon={<FaLocationArrow />}
+              position='right'
             />
           </a>
 
