@@ -6,6 +6,8 @@ import { GlobeDemo } from "./GridGlobe";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import Lottie from "react-lottie";
+import { IoCopyOutline } from "react-icons/io5";
+import { Button } from "./Button";
 
 export const BentoGrid = ({
   className,
@@ -47,6 +49,10 @@ export const BentoGridItem = ({
 }) => {
   
   const [copied, setCoppied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("nimendras07@gmail.com");
+  }
 
   return (
     <div
@@ -122,7 +128,28 @@ export const BentoGridItem = ({
               </div>
             )}
 
-            
+            {id === 6 && (
+              <div className="mt-5 relative">
+                <div className="{`absolute -bottom-5 right-0`}">
+                  <Lottie options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData: animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: 'xMidYMid slice'
+                    }
+                  }}/>
+                </div>
+
+                <Button
+                  title={copied ? "Email copied" : "Copy my email"}
+                  icon={<IoCopyOutline/>}
+                  position="left"
+                  otherClasses="!bg-[#161a31]"
+                  handleClick={handleCopy}
+                />
+              </div>
+            )}
         </div>
     </div>
     </div>
