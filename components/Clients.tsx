@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfiniteMovingCards } from './InfiniteMovingCards'
+import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 import { companies, testimonials } from '@/data'
 
 const Clients = () => {
@@ -17,6 +17,7 @@ const Clients = () => {
                 />
 
             <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg: mt-10'>
+            {/* companies logos */}
             {companies.map(({id, img, name, nameImg}) => (
                 <div key={id}>
                     <img
